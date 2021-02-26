@@ -35,7 +35,8 @@ const UsuarioSchema = Schema({
 
 // Esto saca los primeros parámetros del retorno JSON en la respuesta del endpoint.
 UsuarioSchema.methods.toJSON = function() {
-    const { __v, password, ...usuario  } = this.toObject();
+    const { __v, password, _id, ...usuario  } = this.toObject();
+    usuario.uid = _id;
     return usuario;
 }
 

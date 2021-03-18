@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google Singin</title>
+    <title>Google Signin</title>
 
-    <meta name="google-signin-client_id" content="612412487101-nve3eknoplb7buk3e290p8d1nftk1cjb.apps.googleusercontent.com">
+    <meta name="google-signin-client_id" content="1023916028923-mnn067lcjn3itrr0lo8oj1s07kddgrcj.apps.googleusercontent.com">
 
 </head>
 <body>
 
-    <h1>Google Singin</h1>
+    <h1>Google Signin</h1>
     <hr>
 
     <div class="g-signin2" data-onsuccess="onSignIn"></div>
@@ -26,7 +26,7 @@
 
         var url = ( window.location.hostname.includes('localhost') )
                     ? 'http://localhost:8080/api/auth/google'
-                    : 'http://localhost:8080/api/auth/google'; // Debe ser produccion de heroku
+                    : 'https://restserver-curso-fher.herokuapp.com/api/auth/google';
 
 
         function onSignIn(googleUser) {
@@ -48,7 +48,7 @@
             .then( resp => resp.json() )
             .then( data => console.log( 'Nuestro server', data ) )
             .catch( console.log );
-        
+            
         }
 
         function signOut() {
@@ -58,5 +58,6 @@
             });
         }
     </script>
+
 </body>
 </html>

@@ -27,6 +27,9 @@ const ProductoSchema = Schema({
         type: String,
         default: true
     },
+    img: {
+        type : String,
+    },
     usuario: {
         type: Schema.Types.ObjectId,
         ref: 'Usuario',

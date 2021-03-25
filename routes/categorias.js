@@ -69,7 +69,3 @@ router.delete('/:id', [
 ], eliminarCategoria);
 
 module.exports = router;
-
-
-
-

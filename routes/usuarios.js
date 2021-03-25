@@ -1,3 +1,6 @@
+/**
+ * api/usuarios
+ */
 
 const { Router, request } = require('express');
 const { check } = require('express-validator');
@@ -55,8 +58,3 @@ router.patch('/', usuariosPatch);
 
 
 module.exports = router;
-
-
-
-
-

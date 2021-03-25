@@ -18,5 +18,12 @@ const CategoriaSchema = Schema({
     },
 });
 
+// Esto saca los primeros parámetros del retorno JSON en la respuesta del endpoint.
+CategoriaSchema.methods.toJSON = function() {
+    const { __v, _id, estado, ...categoria  } = this.toObject();
+    categoria.uid = _id;
+    return categoria;
+}
+
 
 module.exports = model( 'Categoria', CategoriaSchema );

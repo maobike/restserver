@@ -7,6 +7,10 @@ Servidor rest en NodeJS
 Puerto manejado con paquete dotenv
 Rutas manejadas con express
 
+*** Búsquedas con condicionales
+    En controllers/buscar.js
+
+
 dependencies : 
   bcryptjs : "^2.4.3", para encriptar o hacer hast de contraseña
   cors : "^2.8.5", para manejo de cors
